@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="bg" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Цветя от Пепи във Велико Търново — букети, сватбени аранжировки и подаръчни кутии с цветя. Ул. Никола Габровски 74, Автогара Запад." />
+  <meta name="theme-color" content="#080c07" />
+  <meta name="format-detection" content="telephone=yes" />
+  <title>Цветя от Пепи | Букети и аранжировки във Велико Търново</title>
+  <link rel="icon" href="images/logo.svg" type="image/svg+xml" />
+
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+  <style type="text/tailwindcss">
+    @theme {
+      --color-bg: #080c07;
+      --color-surface: #0f1510;
+      --color-card: #141a13;
+      --color-gold: #c9a84c;
+      --color-gold-light: #e2c97e;
+      --color-cream: #f2ebe0;
+      --color-muted: #b8ad9e;
+      --font-display: Georgia, "Times New Roman", serif;
+      --font-sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    [x-cloak] { display: none !important; }
+    body { background:#080c07; color:#f2ebe0; }
+    .font-display { font-family:Georgia, "Times New Roman", serif; }
+    .font-body { font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; }
+    .fade-edge { background:linear-gradient(90deg,#080c07 0%,rgba(8,12,7,.94) 16%,rgba(8,12,7,.56) 43%,rgba(8,12,7,.10) 70%,rgba(8,12,7,.24) 100%); }
+    .section-line { border-color:rgba(242,235,224,.07); }
+    .gold-border { border-color:rgba(201,168,76,.30); }
+    .card-photo img { transition:transform .65s ease, filter .65s ease; }
+    .card-photo:hover img { transform:scale(1.045); filter:saturate(1.06); }
+    .reveal { animation:reveal .8s ease both; }
+    @keyframes reveal { from {opacity:0; transform:translateY(16px)} to {opacity:1; transform:translateY(0)} }
+    iframe { border:0; }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Florist",
+    "name": "Цветя от Пепи",
+    "telephone": "+359898245455",
+    "email": "atb.trans@hotmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "ул. Никола Габровски 74, Автогара Запад",
+      "addressLocality": "Велико Търново",
+      "addressCountry": "BG"
+    }
+  }
+  </script>
+</head>
+<body class="font-body antialiased selection:bg-gold selection:text-bg" x-data="{ menu:false }">
+
+  <header class="fixed inset-x-0 top-0 z-50 border-b border-white/5 bg-bg/90 backdrop-blur-xl">
+    <div class="mx-auto flex h-18 max-w-[1500px] items-center justify-between px-5 md:px-10 lg:px-14">
+      <a href="#top" class="flex items-center gap-3" aria-label="Цветя от Пепи">
+        <img src="images/logo.svg" alt="Лого Цветя от Пепи" class="h-11 w-auto max-w-[64px] object-contain" />
+        <span class="font-display text-[17px] tracking-[0.04em] text-cream sm:text-xl">Цветя от Пепи</span>
+      </a>
+
+      <nav class="hidden items-center gap-7 lg:flex">
+        <a href="#about" class="text-[11px] font-medium uppercase tracking-[.17em] text-muted hover:text-gold">За нас</a>
+        <a href="#services" class="text-[11px] font-medium uppercase tracking-[.17em] text-muted hover:text-gold">Услуги</a>
+        <a href="#gallery" class="text-[11px] font-medium uppercase tracking-[.17em] text-muted hover:text-gold">Галерия</a>
+        <a href="#location" class="text-[11px] font-medium uppercase tracking-[.17em] text-muted hover:text-gold">Къде сме</a>
+        <a href="tel:+359898245455" class="border border-gold/60 px-5 py-2.5 text-[11px] font-semibold uppercase tracking-[.16em] text-gold transition hover:bg-gold hover:text-bg">Обади се</a>
+      </nav>
+
+      <button @click="menu=!menu" class="grid h-11 w-11 place-items-center border border-white/10 lg:hidden" aria-label="Отвори меню">
+        <span class="text-2xl text-gold" x-text="menu ? '×' : '☰'"></span>
+      </button>
+    </div>
+
+    <nav x-cloak x-show="menu" x-transition class="border-t border-white/5 bg-bg px-5 py-6 lg:hidden">
+      <div class="mx-auto grid max-w-[1500px] gap-4">
+        <a @click="menu=false" href="#about" class="text-sm uppercase tracking-[.16em] text-muted">За нас</a>
+        <a @click="menu=false" href="#services" class="text-sm uppercase tracking-[.16em] text-muted">Услуги</a>
+        <a @click="menu=false" href="#gallery" class="text-sm uppercase tracking-[.16em] text-muted">Галерия</a>
+        <a @click="menu=false" href="#location" class="text-sm uppercase tracking-[.16em] text-muted">Къде сме</a>
+        <a @click="menu=false" href="tel:+359898245455" class="text-sm uppercase tracking-[.16em] text-gold">0898 245 455</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="relative min-h-screen overflow-hidden pt-18">
+      <img src="images/hero.webp" alt="Букет, изработен от Цветя от Пепи" class="absolute inset-0 h-full w-full object-cover object-center" width="1200" height="1600" fetchpriority="high" />
+      <div class="fade-edge absolute inset-0"></div>
+      <div class="absolute inset-0 bg-black/20"></div>
+
+      <div class="relative mx-auto flex min-h-[calc(100vh-72px)] max-w-[1500px] items-end px-5 pb-16 pt-32 md:px-10 md:pb-20 lg:px-14 lg:pb-24">
+        <div class="reveal max-w-3xl">
+          <div class="mb-7 flex items-center gap-4">
+            <span class="h-px w-9 bg-gold"></span>
+            <span class="text-[11px] font-semibold uppercase tracking-[.22em] text-gold">Велико Търново · Автогара Запад</span>
+          </div>
+
+          <h1 class="font-display text-[50px] font-light leading-[.95] tracking-[-.025em] text-cream sm:text-[70px] md:text-[88px] lg:text-[104px]">
+            Цветя за<br />
+            <em class="text-gold-light">вашите</em><br />
+            специални мигове.
+          </h1>
+
+          <p class="mt-7 max-w-xl text-[15px] font-light leading-7 text-muted sm:text-[17px]">
+            Ръчно изработени букети, сватбени аранжировки и подаръчни кутии с цветя — създадени с внимание към всеки детайл.
+          </p>
+
+          <div class="mt-8 flex flex-wrap gap-3">
+            <a href="tel:+359898245455" class="bg-gold px-7 py-4 text-[11px] font-semibold uppercase tracking-[.16em] text-bg transition hover:bg-gold-light">Обади се: 0898 245 455</a>
+            <a href="#services" class="border border-white/20 px-7 py-4 text-[11px] font-medium uppercase tracking-[.16em] text-cream transition hover:border-gold/60 hover:text-gold">Разгледай</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="grid border-b section-line lg:grid-cols-[.75fr_1.25fr]">
+      <div class="relative min-h-[420px] overflow-hidden lg:min-h-[760px]">
+        <img src="images/about.webp" alt="Цветна аранжировка в нежни тонове" class="absolute inset-0 h-full w-full object-cover" width="1000" height="1333" loading="lazy" />
+        <div class="absolute inset-0 bg-gradient-to-tr from-[#1e3319]/55 via-transparent to-black/10"></div>
+      </div>
+      <div class="flex items-center px-5 py-20 md:px-10 lg:px-20 lg:py-28">
+        <div class="max-w-2xl">
+          <div class="mb-5 flex items-center gap-3"><span class="h-px w-6 bg-gold"></span><span class="text-[10px] font-semibold uppercase tracking-[.24em] text-gold">За Цветя от Пепи</span></div>
+          <h2 class="font-display text-4xl font-light leading-tight text-cream sm:text-5xl lg:text-7xl">Красота, създадена<br /><em class="text-gold-light">с настроение.</em></h2>
+          <p class="mt-7 max-w-xl text-[16px] font-light leading-8 text-muted">
+            „Цветя от Пепи“ създава букети и аранжировки за лични поводи, сватби и подаръци. Подбираме цветовете и композицията според повода и усещането, което искате да подарите.
+          </p>
+          <p class="mt-5 max-w-xl text-[15px] font-light leading-7 text-muted/80">
+            Всички снимки на тази страница са от реални аранжировки на магазина.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="border-b section-line px-5 py-20 md:px-10 lg:px-14 lg:py-28">
+      <div class="mx-auto max-w-[1500px]">
+        <div class="mb-12 flex flex-col justify-between gap-6 md:flex-row md:items-end">
+          <div>
+            <div class="mb-4 flex items-center gap-3"><span class="h-px w-6 bg-gold"></span><span class="text-[10px] font-semibold uppercase tracking-[.24em] text-gold">Услуги</span></div>
+            <h2 class="font-display text-4xl font-light leading-tight sm:text-5xl lg:text-7xl">Цветя за всеки<br /><em class="text-gold-light">важен повод.</em></h2>
+          </div>
+          <p class="max-w-sm text-sm font-light leading-7 text-muted md:text-right">Кажете повода и предпочитаните цветове — ще уточним подходяща композиция.</p>
+        </div>
+
+        <div class="grid gap-5 md:grid-cols-3">
+          <article class="card-photo overflow-hidden bg-card">
+            <div class="aspect-[4/5] overflow-hidden"><img src="images/service-bouquet.webp" alt="Ръчно изработен букет" class="h-full w-full object-cover" width="1000" height="1333" loading="lazy" /></div>
+            <div class="p-6">
+              <div class="mb-3 text-[10px] font-semibold uppercase tracking-[.2em] text-gold">По поръчка</div>
+              <h3 class="font-display text-3xl font-light">Букети</h3>
+              <p class="mt-3 text-sm font-light leading-7 text-muted">Свежи букети за рожден ден, имен ден, годишнина, благодарност или красив жест.</p>
+              <a href="tel:+359898245455" class="mt-6 inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[.15em] text-gold">Поръчай <span>→</span></a>
+            </div>
+          </article>
+
+          <article class="card-photo overflow-hidden bg-card">
+            <div class="aspect-[4/5] overflow-hidden"><img src="images/service-wedding.webp" alt="Сватбена цветна аранжировка" class="h-full w-full object-cover" width="1000" height="1333" loading="lazy" /></div>
+            <div class="p-6">
+              <div class="mb-3 text-[10px] font-semibold uppercase tracking-[.2em] text-gold">Сватби</div>
+              <h3 class="font-display text-3xl font-light">Сватбени аранжировки</h3>
+              <p class="mt-3 text-sm font-light leading-7 text-muted">Булчински букети и цветни композиции, съобразени с темата и цветовете на сватбата.</p>
+              <a href="tel:+359898245455" class="mt-6 inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[.15em] text-gold">Запитване <span>→</span></a>
+            </div>
+          </article>
+
+          <article class="card-photo overflow-hidden bg-card">
+            <div class="aspect-[4/5] overflow-hidden"><img src="images/service-gift-box.webp" alt="Подаръчна кутия с цветя" class="h-full w-full object-cover" width="1000" height="1333" loading="lazy" /></div>
+            <div class="p-6">
+              <div class="mb-3 text-[10px] font-semibold uppercase tracking-[.2em] text-gold">Подарък</div>
+              <h3 class="font-display text-3xl font-light">Кутии с цветя</h3>
+              <p class="mt-3 text-sm font-light leading-7 text-muted">Стилен подарък с цветя, подредени в красива кутия за специален човек и специален момент.</p>
+              <a href="tel:+359898245455" class="mt-6 inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[.15em] text-gold">Поръчай <span>→</span></a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery" class="border-b section-line px-5 py-20 md:px-10 lg:px-14 lg:py-28">
+      <div class="mx-auto max-w-[1500px]">
+        <div class="mb-10">
+          <div class="mb-4 flex items-center gap-3"><span class="h-px w-6 bg-gold"></span><span class="text-[10px] font-semibold uppercase tracking-[.24em] text-gold">Галерия</span></div>
+          <h2 class="font-display text-4xl font-light leading-tight sm:text-5xl lg:text-7xl">Наши букети и<br /><em class="text-gold-light">аранжировки.</em></h2>
+        </div>
+
+        <div class="grid auto-rows-[260px] gap-3 sm:auto-rows-[320px] md:grid-cols-4 lg:auto-rows-[370px]">
+          <div class="card-photo overflow-hidden md:row-span-2 md:col-span-2"><img src="images/gallery-01.webp" alt="Розова цветна композиция" class="h-full w-full object-cover" width="1000" height="1333" loading="lazy" /></div>
+          <div class="card-photo overflow-hidden"><img src="images/gallery-02.webp" alt="Бяло-лилава цветна композиция" class="h-full w-full object-cover" width="1000" height="1333" loading="lazy" /></div>
+          <div class="card-photo overflow-hidden"><img src="images/gallery-03.webp" alt="Оранжево-жълт букет" class="h-full w-full object-cover" width="1000" height="1333" loading="lazy" /></div>
+          <div class="card-photo overflow-hidden"><img src="images/gallery-04.webp" alt="Букет от червени рози" class="h-full w-full object-cover" width="1000" height="1333" loading="lazy" /></div>
+          <div class="card-photo overflow-hidden"><img src="images/gallery-05.webp" alt="Букет в розови и прасковени тонове" class="h-full w-full object-cover" width="1000" height="1333" loading="lazy" /></div>
+          <div class="card-photo overflow-hidden md:col-span-2"><img src="images/gallery-06.webp" alt="Аранжировка с червени рози" class="h-full w-full object-cover" width="1000" height="1333" loading="lazy" /></div>
+          <div class="card-photo overflow-hidden"><img src="images/gallery-07.webp" alt="Подаръчна композиция с червени цветя" class="h-full w-full object-cover" width="1000" height="1333" loading="lazy" /></div>
+          <div class="card-photo overflow-hidden"><img src="images/gallery-08.webp" alt="Слънчев букет в жълто и оранжево" class="h-full w-full object-cover" width="1000" height="1333" loading="lazy" /></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="process" class="border-b section-line px-5 py-20 md:px-10 lg:px-14 lg:py-28">
+      <div class="mx-auto max-w-[1500px]">
+        <div class="mb-12">
+          <div class="mb-4 flex items-center gap-3"><span class="h-px w-6 bg-gold"></span><span class="text-[10px] font-semibold uppercase tracking-[.24em] text-gold">Как работим</span></div>
+          <h2 class="font-display text-4xl font-light leading-tight sm:text-5xl lg:text-7xl">От идеята до<br /><em class="text-gold-light">готовия букет.</em></h2>
+        </div>
+
+        <div class="grid border-y border-white/7 md:grid-cols-4">
+          <div class="border-b border-white/7 p-7 md:border-b-0 md:border-r"><div class="text-xs tracking-[.18em] text-gold">01</div><h3 class="mt-8 font-display text-2xl">Разговор</h3><p class="mt-3 text-sm font-light leading-7 text-muted">Казвате повода, цветовете и какво настроение търсите.</p></div>
+          <div class="border-b border-white/7 p-7 md:border-b-0 md:border-r"><div class="text-xs tracking-[.18em] text-gold">02</div><h3 class="mt-8 font-display text-2xl">Подбор</h3><p class="mt-3 text-sm font-light leading-7 text-muted">Подбираме подходящи цветя и комбинации.</p></div>
+          <div class="border-b border-white/7 p-7 md:border-b-0 md:border-r"><div class="text-xs tracking-[.18em] text-gold">03</div><h3 class="mt-8 font-display text-2xl">Изработка</h3><p class="mt-3 text-sm font-light leading-7 text-muted">Аранжировката се изработва ръчно с внимание към детайла.</p></div>
+          <div class="p-7"><div class="text-xs tracking-[.18em] text-gold">04</div><h3 class="mt-8 font-display text-2xl">Получаване</h3><p class="mt-3 text-sm font-light leading-7 text-muted">Уточняваме кога и как да получите готовата поръчка.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="grid border-b section-line lg:grid-cols-[.85fr_1.15fr]" x-data="contactForm()">
+      <div class="relative min-h-[520px] overflow-hidden lg:min-h-[760px]">
+        <img src="images/gallery-05.webp" alt="Букет от Цветя от Пепи" class="absolute inset-0 h-full w-full object-cover" width="1000" height="1333" loading="lazy" />
+        <div class="absolute inset-0 bg-gradient-to-t from-bg via-bg/65 to-black/15"></div>
+        <div class="absolute inset-x-0 bottom-0 p-7 md:p-10 lg:p-14">
+          <div class="font-display text-2xl italic text-gold">Цветя от Пепи</div>
+          <div class="mt-6 grid gap-4 text-sm font-light leading-7 text-muted">
+            <a href="tel:+359898245455" class="group"><span class="block text-[10px] font-semibold uppercase tracking-[.18em] text-gold">Телефон</span><span class="text-base text-cream group-hover:text-gold">0898 245 455</span></a>
+            <a href="mailto:atb.trans@hotmail.com" class="group"><span class="block text-[10px] font-semibold uppercase tracking-[.18em] text-gold">Email</span><span class="text-base text-cream group-hover:text-gold">atb.trans@hotmail.com</span></a>
+            <a href="https://www.google.com/maps/search/?api=1&query=%D1%83%D0%BB.%20%D0%9D%D0%B8%D0%BA%D0%BE%D0%BB%D0%B0%20%D0%93%D0%B0%D0%B1%D1%80%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%2074%2C%20%D0%92%D0%B5%D0%BB%D0%B8%D0%BA%D0%BE%20%D0%A2%D1%8A%D1%80%D0%BD%D0%BE%D0%B2%D0%BE%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F" target="_blank" rel="noopener" class="group"><span class="block text-[10px] font-semibold uppercase tracking-[.18em] text-gold">Адрес</span><span class="text-base text-cream group-hover:text-gold">Велико Търново, Автогара Запад<br />ул. Никола Габровски 74</span></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex items-center px-5 py-20 md:px-10 lg:px-20 lg:py-28">
+        <div class="w-full max-w-2xl">
+          <div class="mb-4 flex items-center gap-3"><span class="h-px w-6 bg-gold"></span><span class="text-[10px] font-semibold uppercase tracking-[.24em] text-gold">Контакт</span></div>
+          <h2 class="font-display text-4xl font-light leading-tight sm:text-5xl lg:text-6xl">Поръчайте<br /><em class="text-gold-light">нещо красиво.</em></h2>
+          <p class="mt-5 max-w-lg text-sm font-light leading-7 text-muted">Най-бързо ще се свържете с нас по телефона. Можете и да изпратите запитване по email чрез формата.</p>
+
+          <div class="mt-7 flex flex-wrap gap-3">
+            <a href="tel:+359898245455" class="bg-gold px-6 py-3.5 text-[11px] font-semibold uppercase tracking-[.16em] text-bg hover:bg-gold-light">Позвъни</a>
+            <a href="mailto:atb.trans@hotmail.com" class="border border-gold/45 px-6 py-3.5 text-[11px] font-semibold uppercase tracking-[.16em] text-gold hover:bg-gold/10">Email</a>
+          </div>
+
+          <form class="mt-9 grid gap-5" @submit.prevent="send">
+            <div class="grid gap-5 sm:grid-cols-2">
+              <label class="grid gap-2 text-[10px] font-semibold uppercase tracking-[.16em] text-gold/80">Име<input x-model="name" required class="border border-white/10 bg-card px-4 py-3.5 text-sm normal-case tracking-normal text-cream outline-none focus:border-gold/50" type="text" /></label>
+              <label class="grid gap-2 text-[10px] font-semibold uppercase tracking-[.16em] text-gold/80">Телефон<input x-model="phone" required class="border border-white/10 bg-card px-4 py-3.5 text-sm normal-case tracking-normal text-cream outline-none focus:border-gold/50" type="tel" /></label>
+            </div>
+            <label class="grid gap-2 text-[10px] font-semibold uppercase tracking-[.16em] text-gold/80">Повод
+              <select x-model="occasion" class="border border-white/10 bg-card px-4 py-3.5 text-sm normal-case tracking-normal text-cream outline-none focus:border-gold/50">
+                <option>Букет</option><option>Сватбена аранжировка</option><option>Подаръчна кутия</option><option>Друго</option>
+              </select>
+            </label>
+            <label class="grid gap-2 text-[10px] font-semibold uppercase tracking-[.16em] text-gold/80">Съобщение<textarea x-model="message" rows="5" class="resize-y border border-white/10 bg-card px-4 py-3.5 text-sm normal-case tracking-normal text-cream outline-none focus:border-gold/50" placeholder="Кажете ни какво търсите..."></textarea></label>
+            <button type="submit" class="w-fit bg-gold px-8 py-4 text-[11px] font-semibold uppercase tracking-[.16em] text-bg transition hover:bg-gold-light">Изпрати по email</button>
+          </form>
+          <p class="mt-4 text-xs font-light leading-6 text-muted/65">Бутонът отваря email приложението на телефона или компютъра с попълнено съобщение.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="location" class="px-5 py-20 md:px-10 lg:px-14 lg:py-28">
+      <div class="mx-auto max-w-[1500px]">
+        <div class="mb-10 flex flex-col justify-between gap-6 md:flex-row md:items-end">
+          <div>
+            <div class="mb-4 flex items-center gap-3"><span class="h-px w-6 bg-gold"></span><span class="text-[10px] font-semibold uppercase tracking-[.24em] text-gold">Къде сме</span></div>
+            <h2 class="font-display text-4xl font-light leading-tight sm:text-5xl lg:text-7xl">Намерете ни във<br /><em class="text-gold-light">Велико Търново.</em></h2>
+          </div>
+          <div class="max-w-md text-sm font-light leading-7 text-muted md:text-right">
+            <strong class="font-medium text-cream">Автогара Запад</strong><br />ул. Никола Габровски 74<br />Велико Търново
+          </div>
+        </div>
+
+        <div class="overflow-hidden border gold-border bg-card">
+          <iframe
+            title="Google карта - Цветя от Пепи"
+            src="https://www.google.com/maps?q=%D1%83%D0%BB.%20%D0%9D%D0%B8%D0%BA%D0%BE%D0%BB%D0%B0%20%D0%93%D0%B0%D0%B1%D1%80%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%2074%2C%20%D0%92%D0%B5%D0%BB%D0%B8%D0%BA%D0%BE%20%D0%A2%D1%8A%D1%80%D0%BD%D0%BE%D0%B2%D0%BE%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F&output=embed"
+            class="h-[420px] w-full md:h-[520px]"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen>
+          </iframe>
+        </div>
+
+        <div class="mt-5 flex flex-wrap gap-3">
+          <a href="https://www.google.com/maps/search/?api=1&query=%D1%83%D0%BB.%20%D0%9D%D0%B8%D0%BA%D0%BE%D0%BB%D0%B0%20%D0%93%D0%B0%D0%B1%D1%80%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%2074%2C%20%D0%92%D0%B5%D0%BB%D0%B8%D0%BA%D0%BE%20%D0%A2%D1%8A%D1%80%D0%BD%D0%BE%D0%B2%D0%BE%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F" target="_blank" rel="noopener" class="border border-gold/50 px-6 py-3.5 text-[11px] font-semibold uppercase tracking-[.16em] text-gold hover:bg-gold hover:text-bg">Отвори в Google Maps</a>
+          <a href="tel:+359898245455" class="bg-gold px-6 py-3.5 text-[11px] font-semibold uppercase tracking-[.16em] text-bg hover:bg-gold-light">0898 245 455</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t section-line px-5 py-8 md:px-10 lg:px-14">
+    <div class="mx-auto flex max-w-[1500px] flex-col gap-4 text-xs text-muted/70 sm:flex-row sm:items-center sm:justify-between">
+      <span>© 2026 Цветя от Пепи · Велико Търново</span>
+      <span>Букети · Сватбени аранжировки · Подаръчни кутии</span>
+    </div>
+  </footer>
+
+  <script>
+    function contactForm() {
+      return {
+        name: '',
+        phone: '',
+        occasion: 'Букет',
+        message: '',
+        send() {
+          const subject = 'Запитване от сайта — ' + this.occasion;
+          const body = 'Име: ' + this.name + '\n' +
+                       'Телефон: ' + this.phone + '\n' +
+                       'Повод: ' + this.occasion + '\n\n' +
+                       'Съобщение: ' + this.message;
+          window.location.href = 'mailto:atb.trans@hotmail.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+        }
+      }
+    }
+  </script>
+</body>
+</html>
